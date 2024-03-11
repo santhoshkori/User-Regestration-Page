@@ -149,12 +149,12 @@
 
         return (
             <div className="bgcontainer">
-                <form className="logincard" onSubmit={regesterme}>
+                <form className="logincard" onSubmit={regesterme} action="/submit" method="post">
                   <h1 className="heading">User Regestration</h1>
                   <div className="input">
                     <label className="labelsty">UserName</label>
                     <br/>
-                    <input type="text" onChange={usernamevalue} onBlur={warningmessageusername} className="namepassinput" placeholder="Enter your Name" />
+                    <input type="text" id="personname" name="personname" onChange={usernamevalue} onBlur={warningmessageusername} className="namepassinput" placeholder="Enter your Name" />
                     <p className="warningpara" >{warning}</p>
                     
                     
@@ -163,14 +163,14 @@
                   <div className="input">
                     <label className="labelsty">Password</label>
                     <br/>
-                    <input type="text" className="namepassinput" onBlur={warningmessagepassword} placeholder="Enter your Password" onChange={passwordvalue} />
+                    <input type="text" id="personpassword" name="personpassword" className="namepassinput" onBlur={warningmessagepassword} placeholder="Enter your Password" onChange={passwordvalue} />
                     <p className="warningpara" >{passwordwarning}</p>
                   </div>
                   
                   <div className="input">
                     <label className="labelsty">Retype Password</label>
                     <br/>
-                    <input type="text" className="namepassinput" onBlur={warningmessageretypepassword} placeholder="Re-Enter your Password" onChange={retypepasswordvalue} />
+                    <input type="text" id="personretypepassword" name="personretypepassword" className="namepassinput" onBlur={warningmessageretypepassword} placeholder="Re-Enter your Password" onChange={retypepasswordvalue} />
                   <p className="warningpara">{retypepasswordwarning}</p>
                     </div>
                   
